@@ -3,8 +3,8 @@ import { validateFieldLenght } from "./validateLenght.js";
 
 let fields = {
     employeeName: {
-        field: document.getElementById('employee_name'),
-        errorField: document.getElementById('name_error'),
+        field: document.getElementById('imie'),
+        errorField: document.getElementById('imie_error'),
         lenght: {
             min: 1,
             max: 50,
@@ -13,8 +13,8 @@ let fields = {
         required: true
     },
     last_name: {
-        field: document.getElementById('last_name'),
-        errorField: document.getElementById('last_name_error'),
+        field: document.getElementById('nazwisko'),
+        errorField: document.getElementById('nazwisko_error'),
         lenght: {
             min: 1,
             max: 50,
@@ -23,8 +23,8 @@ let fields = {
         required: true
     },
     phone: {
-        field: document.getElementById('phone'),
-        errorField: document.getElementById('phone_error'),
+        field: document.getElementById('telefon'),
+        errorField: document.getElementById('telefon_error'),
         lenght: {
             min: 9,
             max: 20,
@@ -33,8 +33,8 @@ let fields = {
         required: false
     },
     description: {
-        field: document.getElementById('description'),
-        errorField: document.getElementById('description_error'),
+        field: document.getElementById('opis'),
+        errorField: document.getElementById('opis_error'),
         lenght: {
             min: 0,
             max: 1000,

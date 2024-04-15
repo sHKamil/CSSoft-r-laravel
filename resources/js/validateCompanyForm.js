@@ -2,8 +2,8 @@ import { validateFieldLenght } from "./validateLenght.js";
 
 let fields = {
     companyName: {
-        field: document.getElementById('company_name'),
-        errorField: document.getElementById('name_error'),
+        field: document.getElementById('nazwa'),
+        errorField: document.getElementById('nazwa_error'),
         lenght: {
             min: 1,
             max: 100,
@@ -12,8 +12,8 @@ let fields = {
         required: true
     },
     address: {
-        field: document.getElementById('address'),
-        errorField: document.getElementById('address_error'),
+        field: document.getElementById('adres'),
+        errorField: document.getElementById('adres_error'),
         lenght: {
             min: 0,
             max: 100,
@@ -32,8 +32,8 @@ let fields = {
         required: true
     },
     description: {
-        field: document.getElementById('description'),
-        errorField: document.getElementById('description_error'),
+        field: document.getElementById('opis'),
+        errorField: document.getElementById('opis_error'),
         lenght: {
             min: 0,
             max: 1000,

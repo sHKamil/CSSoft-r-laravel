@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\FirmaController;
+use App\Http\Controllers\PracownikController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -20,3 +21,6 @@ Route::get('/', function () {
 
 Route::get('/firma', [FirmaController::class, 'create']);
 Route::post('/firma/store', [FirmaController::class, 'store']);
+
+Route::get('/pracownik', [PracownikController::class, 'create']);
+Route::post('/pracownik/store', [PracownikController::class, 'store']);

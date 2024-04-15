@@ -4,7 +4,7 @@ namespace App\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
 
-class FirmaRequest extends FormRequest
+class PracownikRequest extends FormRequest
 {
     /**
      * Determine if the user is authorized to make this request.
@@ -22,9 +22,11 @@ class FirmaRequest extends FormRequest
     public function rules(): array
     {
         return [
-            'nazwa' => 'required|max:100',
-            'adres' => 'nullable|max:100',
-            'nip' => 'required|numeric|min:10|max:10',
+            'id_firmy' => 'nullable',
+            'imie' => 'required|max:50',
+            'nazwisko' => 'required|max:50',
+            'telefon' => 'nullable|min:9|max:20',
+            'email' => 'nullable|max:100',
             'opis' => 'nullable|max:1000',
         ];
     }

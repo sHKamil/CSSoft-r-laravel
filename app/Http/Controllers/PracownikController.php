@@ -2,6 +2,10 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\FirmaRequest;
+use App\Http\Requests\PracownikRequest;
+use App\Models\Firma;
+use App\Models\Pracownik;
 use Illuminate\Http\Request;
 
 class PracownikController extends Controller
@@ -19,15 +23,26 @@ class PracownikController extends Controller
      */
     public function create()
     {
-        //
+        $companies = Firma::all();
+
+        return view('pracownik.create', ['companies' => $companies]);
     }
 
     /**
      * Store a newly created resource in storage.
      */
-    public function store(Request $request)
+    public function store(PracownikRequest $request)
     {
-        //
+        $pracownik = new Pracownik();
+        $pracownik->id_firmy = $request->id_firmy;
+        $pracownik->imie = $request->imie;
+        $pracownik->nazwisko = $request->nazwisko;
+        $pracownik->telefon = $request->telefon;
+        $pracownik->email = $request->email;
+        $pracownik->opis = $request->opis;
+        $pracownik->save();
+
+        return redirect('/pracownik')->with('success', 'Pracownik został dodana!');
     }
 
     /**

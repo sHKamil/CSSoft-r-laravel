@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Firma;
 use App\Http\Requests\FirmaRequest;
+use Illuminate\Http\Request;
 
 class FirmaController extends Controller
 {
@@ -36,7 +37,7 @@ class FirmaController extends Controller
         $firma->opis = $request->description;
         $firma->save();
 
-        return redirect('/firma/create')->with('success', 'Firma została dodana!');
+        return redirect('/firma')->with('success', 'Firma została dodana!');
     }
 
     /**

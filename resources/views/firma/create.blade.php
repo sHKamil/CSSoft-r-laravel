@@ -1,7 +1,3 @@
-
-
-
-
 @extends('layouts.app')
 
 @section('content')
@@ -11,22 +7,22 @@
         </div>
         <form action="/firma/store" id="companyForm" method="POST">
             @csrf
-            <label for="company_name" class="form-label">Nazwa Firmy</label>
+            <label for="nazwa" class="form-label">Nazwa Firmy</label>
             <div class="input-group mb-2">
                 <span class="input-group-text">
                     <i class="bi bi-buildings"></i>
                 </span>
-                <input type="text" name="company_name" id="company_name" class="form-control" placeholder="Nazwa firmy" required />
+                <input type="text" name="nazwa" id="nazwa" class="form-control" placeholder="Nazwa firmy" required />
             </div>
-            <div id="name_error" class="form-error"></div>
-            <label for="address" class="form-label">Adres:</label>
+            <div id="nazwa_error" class="form-error"></div>
+            <label for="adres" class="form-label">Adres:</label>
             <div class="mb-2 input-group">
                 <span class="input-group-text">
                     <i class="bi bi-geo-alt"></i>
                 </span>
-                <input type="text" name="address" id="address" class="form-control" placeholder="Adres" />
+                <input type="text" name="adres" id="adres" class="form-control" placeholder="Adres" />
             </div>
-            <div id="address_error" class="form-error"></div>
+            <div id="adres_error" class="form-error"></div>
             <label for="nip" class="form-label">NIP:</label>
             <div class="mb-2 input-group">
                 <span class="input-group-text">
@@ -36,10 +32,10 @@
             </div>
             <div id="nip_error" class="form-error"></div>
             <div class="mb-2 mt-5 form-floating">
-                <textarea class="form-control" name="description" id="description" style="height: 140px" placeholder="opis"></textarea>
-                <label for="description">Opis działalności</label>
+                <textarea class="form-control" name="opis" id="opis" style="height: 140px" placeholder="opis"></textarea>
+                <label for="opis">Opis działalności</label>
             </div>
-            <div id="description_error" class="form-error"></div>
+            <div id="opis_error" class="form-error"></div>
 
             <div class="mb-2 text-center">
                 <button type="submit" class="btn btn-secondary">Dodaj</button>
