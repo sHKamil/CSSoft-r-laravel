@@ -1,0 +1,22 @@
+:root {
+    font-family: "Ubuntu", sans-serif;
+}
+
+html{
+    font-family: "Ubuntu", sans-serif;
+    color: #333;
+}
+
+.header {
+    background-color: #eee;
+}
+
+nav.navbar {
+    background-color: #eee;
+}
+
+.form-error {
+    min-height: 1rem;
+    line-height: 1rem;
+    color: var(--bs-danger);
+}

@@ -2,7 +2,8 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
+use App\Models\Firma;
+use App\Http\Requests\FirmaRequest;
 
 class FirmaController extends Controller
 {
@@ -11,7 +12,7 @@ class FirmaController extends Controller
      */
     public function index()
     {
-        //
+        // 
     }
 
     /**
@@ -19,15 +20,23 @@ class FirmaController extends Controller
      */
     public function create()
     {
-        //
+        return view('firma.create');
     }
 
     /**
      * Store a newly created resource in storage.
      */
-    public function store(Request $request)
+    public function store(FirmaRequest $request)
     {
-        //
+
+        $firma = new Firma();
+        $firma->nazwa = $request->company_name;
+        $firma->adres = $request->address;
+        $firma->nip = $request->nip;
+        $firma->opis = $request->description;
+        $firma->save();
+
+        return redirect('/firma/create')->with('success', 'Firma została dodana!');
     }
 
     /**
