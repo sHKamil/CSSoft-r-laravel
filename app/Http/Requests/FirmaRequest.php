@@ -24,7 +24,7 @@ class FirmaRequest extends FormRequest
         return [
             'nazwa' => 'required|max:100',
             'adres' => 'nullable|max:100',
-            'nip' => 'required|numeric|min:10|max:10',
+            'nip' => 'required|digits:10',
             'opis' => 'nullable|max:1000',
         ];
     }

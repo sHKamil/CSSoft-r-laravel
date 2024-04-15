@@ -3,10 +3,10 @@
 @section('content')
 
     <div class="container">
-        <div class="text-center mt-5">
-            <h2>Firmy</h2>
-        </div>
-        @if(isset($companiesWithEmployee) && !empty($companiesWithEmployee))
+        @if(!$companiesWithEmployee->isEmpty())
+            <div class="text-center mt-5">
+                <h2>Firmy</h2>
+            </div>
             <div class="accordion" id="accordionCompaniesWithEmploees">
                 @foreach ($companiesWithEmployee as $companyWithEmployee)
                     <div class="accordion-item">
@@ -22,7 +22,7 @@
                                 <span class="mb-3 "><h6 class="mb-0">NIP: </h6>{{  $companyWithEmployee->nip }}</span>
                                 <span class="mb-3 "><h6 class="mb-0">Adres: </h6>{{  $companyWithEmployee->adres }}</span>
                                 <span class="mb-3 "><h6 class="mb-0">Opis: </h6>{{  $companyWithEmployee->opis }}</span>
-                                @if(isset($companyWithEmployee->pracownicy) && !empty($companyWithEmployee->pracownicy))
+                                @if($companyWithEmployee->pracownicy)
                                 <div>
                                     <span>Pracownicy:</span>
                                     <ul>
@@ -44,10 +44,10 @@
             </div>
         @endif
 
-        <div class="text-center mt-5">
-            <h2>Pracownicy</h2>
-        </div>
-        @if(isset($employeesWithCompanyName) && !empty($employeesWithCompanyName))
+        @if(!$employeesWithCompanyName->isEmpty())
+            <div class="text-center mt-5">
+                <h2>Pracownicy</h2>
+            </div>
             <div class="accordion" id="accordionEmployees">
                 @foreach ($employeesWithCompanyName as $employeeWithCompanyName)
                     <div class="accordion-item">
@@ -63,7 +63,7 @@
                                 <span class="mb-3 "><h6 class="mb-0">Telefon: </h6> {{$employeeWithCompanyName->telefon}}</span>
                                 <span class="mb-3 "><h6 class="mb-0">E-mail: </h6> {{$employeeWithCompanyName->email}}</span>
                                 <span class="mb-3 "><h6 class="mb-0">Opis: </h6> {{$employeeWithCompanyName->opis}}</span>
-                                @if(isset($employeeWithCompanyName->firma) && !empty($employeeWithCompanyName->firma))
+                                @if($employeeWithCompanyName->firma)
                                 <span class="mb-3 "><h6 class="mb-0">Nazwa firmy: </h6> {{$employeeWithCompanyName->firma->nazwa}}</span>
                                 @endif
                             </div>

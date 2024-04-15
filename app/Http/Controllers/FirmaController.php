@@ -29,12 +29,11 @@ class FirmaController extends Controller
      */
     public function store(FirmaRequest $request)
     {
-
         $firma = new Firma();
-        $firma->nazwa = $request->company_name;
-        $firma->adres = $request->address;
+        $firma->nazwa = $request->nazwa;
+        $firma->adres = $request->adres;
         $firma->nip = $request->nip;
-        $firma->opis = $request->description;
+        $firma->opis = $request->opis;
         $firma->save();
 
         return redirect('/firma')->with('success', 'Firma została dodana!');
