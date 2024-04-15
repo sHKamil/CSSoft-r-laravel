@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
     @vite('resources/css/app.css')
 </head>
-<body style='font-family: "Ubuntu", sans-serif;'>
+<body class="d-flex flex-column min-vh-100" style='font-family: "Ubuntu", sans-serif;'>
     <nav style="background-color: #eee;" class="navbar navbar-expand-lg">
         <div class="container-fluid gap-md-0 gap-lg-5">
             <span class="text-break "><a class="navbar-brand" href="/">Kamil Hałasa</a><a class="navbar-brand" href="/">Rekrutacja CSSoft 2024</a></span>

@@ -19,7 +19,7 @@ class Pracownik extends Model
         'data_dodania',
     ];
 
-    public function company()
+    public function firma()
     {
         return $this->belongsTo(Firma::class, 'id_firmy');
     }

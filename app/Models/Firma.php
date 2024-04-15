@@ -9,6 +9,11 @@ class Firma extends Model
 {
     use HasFactory;
 
+    public function pracownicy()
+    {
+        return $this->hasMany(Pracownik::class, 'id_firmy');
+    }
+
     protected $table = 'firmy';
 
     protected $fillable = [
